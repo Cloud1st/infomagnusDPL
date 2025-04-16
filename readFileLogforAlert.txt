@@ -1,0 +1,35 @@
+https://stackoverflow.com/questions/4331309/shellscript-to-monitor-a-log-file-if-keyword-triggers-then-execute-a-command
+
+#####################################
+option 1 : 
+
+tail -fn0 logfile | \
+while read line ; do
+        echo "$line" | grep "pattern"
+        if [ $? = 0 ]
+        then
+                ... do something ...
+        fi
+done
+
+#############################
+option 2 
+
+infile = r"D:\Documents and Settings\xxxx\Desktop\test_log.txt"
+
+important = []
+keep_phrases = ["test",
+              "important",
+              "keep me"]
+
+with open(infile) as f:
+    f = f.readlines()
+
+for line in f:
+    for phrase in keep_phrases:
+        if phrase in line:
+            important.append(line)
+            break
+
+print(important)
+

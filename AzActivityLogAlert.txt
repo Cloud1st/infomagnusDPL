@@ -1,0 +1,14 @@
+Set-AzActivityLogAlert
+   -Location <String>
+   -Name <String>
+   -ResourceGroupName <String>
+   -Scope <System.Collections.Generic.List`1[System.String]>
+   -Condition <System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertLeafCondition]>
+   -Action <System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup]>
+   [-DisableAlert]
+   [-Description <String>]
+   [-Tag <System.Collections.Generic.Dictionary`2[System.String,System.String]>]
+   [-DefaultProfile <IAzureContextContainer>]
+   [-WhatIf]
+   [-Confirm]
+   [<CommonParameters>]

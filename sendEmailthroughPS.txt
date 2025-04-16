@@ -1,0 +1,10 @@
+$sendMailMessageSplat = @{
+    From = 'User01 <user01@fabrikam.com>'
+    To = 'ITGroup <itdept@fabrikam.com>'
+    Cc = 'User02 <user02@fabrikam.com>'
+    Bcc = 'ITMgr <itmgr@fabrikam.com>'
+    Subject = "Don't forget today's meeting!"
+    Credential = 'domain01\admin01'
+    UseSsl = $true
+}
+Send-MailMessage @sendMailMessageSplat
